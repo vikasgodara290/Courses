@@ -12,9 +12,12 @@ namespace Courses.Controllers
             _courseDetailsService = courseDetailsService;
         }
 
-        public IActionResult Course()
+        [HttpGet]
+        public IActionResult Course(int CourseId)
         {
-            var list = _courseDetailsService.courseDetails(10);
+            var list = _courseDetailsService.courseDetails(CourseId);
+
+            ViewBag.CourseId = CourseId;    
 
             Course course = new Course();
             foreach (var item in list)

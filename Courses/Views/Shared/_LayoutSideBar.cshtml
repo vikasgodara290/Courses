@@ -38,13 +38,13 @@
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-action="Course" asp-controller="Course">
+                <a class="nav-link" asp-area="" asp-action="Course" asp-controller="Course" asp-route-CourseId="@ViewBag.CourseId">
                     <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
                     Overview
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-action="Content" asp-controller="Content">
+                <a class="nav-link" asp-area="" asp-action="Content" asp-controller="Content" asp-route-CourseId="@ViewBag.CourseId">
                     <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
                     Content
                 </a>

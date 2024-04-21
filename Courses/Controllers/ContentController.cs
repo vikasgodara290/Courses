@@ -4,8 +4,10 @@ namespace Courses.Controllers
 {
     public class ContentController : Controller
     {
-        public IActionResult Content()
+        [HttpGet]
+        public IActionResult Content(int CourseId)
         {
+            ViewBag.CourseId = CourseId;    
             return View();
         }
     }
