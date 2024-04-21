@@ -1,4 +1,16 @@
 ﻿@{
     Layout = "../Shared/_LayoutSideBar";
 }
+
 <h1>Content</h1>
+
+@if (ViewBag.CourseId == 10)
+{
+    <a asp-area="" asp-action="Files" asp-controller="Files">DBMS</a>
+}
+@if (ViewBag.CourseId == 1004)
+{
+    <a asp-area="" asp-action="Files" asp-controller="Files">Science</a>
+}
+
+
