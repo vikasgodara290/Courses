@@ -10,6 +10,8 @@ var conn = builder.Configuration.GetConnectionString("DefaultConnectionString");
 
 builder.Services.AddScoped<IBaseRepositry, BaseRepositry>(r => new BaseRepositry(conn));
 builder.Services.AddScoped<ICourseDetailsService, CourseDetailsService>();
+builder.Services.AddScoped<IContentService, ContentService>();
+builder.Services.AddScoped<IFileService, FileService>();
 
 var app = builder.Build();
 

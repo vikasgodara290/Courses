@@ -15,5 +15,16 @@ namespace Courses.Repositry
             var list = SqlHelper.ExecuteStoredProcedureReturnList<T>(_connectionString,storedProcedureName,sqlParameters);
             return list;
         }
+
+        public List<T> GetCourseWiseContentList<T>(string storedProcedureName, SqlParameter[] sqlParameters)
+        {
+            var list = SqlHelper.ExecuteStoredProcedureReturnList<T>(_connectionString, storedProcedureName, sqlParameters);
+            return list;
+        }
+        public List<T> GetContenteWiseFilesList<T>(string storedProcedureName, SqlParameter[] sqlParameters)
+        {
+            var list = SqlHelper.ExecuteStoredProcedureReturnList<T>(_connectionString, storedProcedureName, sqlParameters);
+            return list;
+        }
     }
 }
